@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#11110F"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#11110F"/><text x="100" y="118" text-anchor="middle" font-family="Montserrat, system-ui, sans-serif" font-size="62" font-weight="700" fill="#B09878">CC</text></svg></template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/organic-20c9cf7b-a19b-45bf-b547-f054a9e86d8d/styles.css">
+  <script src="_ds/organic-20c9cf7b-a19b-45bf-b547-f054a9e86d8d/_ds_bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+  <style>
+    @font-face { font-family: "TT Interphases Pro"; src: url("fonts/TTInterphasesPro-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap }
+    @font-face { font-family: "TT Interphases Pro"; src: url("fonts/TTInterphasesPro-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap }
+    @font-face { font-family: "TT Interphases Pro"; src: url("fonts/TTInterphasesPro-DemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap }
+    @font-face { font-family: "TT Interphases Pro"; src: url("fonts/TTInterphasesPro-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap }
+    @font-face { font-family: "TT Interphases Mono"; src: url("fonts/TTInterphasesProMono-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap }
+    @font-face { font-family: "TT Interphases Mono"; src: url("fonts/TTInterphasesProMono-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap }
+    :root {
+      --color-bg: #11110F;
+      --color-surface: #202018;
+      --color-text: #FAF8F3;
+      --color-accent: #B09878;
+      --color-divider: rgba(250, 248, 243, 0.12);
+      --ink: #11110F;
+      --panel: #191914;
+      --panel-2: #202018;
+      --cream: #F3F0E8;
+      --white: #FAF8F3;
+      --muted: #A8A096;
+      --accent: #B09878;
+      --accent-soft: rgba(176, 152, 120, 0.14);
+      --font-heading: "Montserrat", system-ui, sans-serif;
+      --font-heading-weight: 700;
+      --font-body: "Montserrat", system-ui, sans-serif;
+      --font-alt: "TT Interphases Pro", "Montserrat", system-ui, sans-serif;
+      --font-mono: "TT Interphases Mono", ui-monospace, monospace;
+    }
+    body { margin: 0; background: #11110F; color: #FAF8F3; -webkit-font-smoothing: antialiased }
+    h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.025em }
+    a { color: #B09878 }
+    a:hover { color: #C7B396 }
+    ::selection { background: rgba(176, 152, 120, 0.35) }
+    :focus-visible { outline: 2px solid #B09878; outline-offset: 3px }
+    @keyframes ccMarquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    @keyframes ccGrain { 0%,100% { transform: translate(0,0) } 20% { transform: translate(-3%,2%) } 40% { transform: translate(2%,-3%) } 60% { transform: translate(-2%,-2%) } 80% { transform: translate(3%,1%) } }
+
+    /* Modern Responsive Scaling Engine */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    [data-bento] {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+    [data-bento] > div {
+      grid-column: span 2;
+      min-width: 0;
+    }
+    [data-bento] > div:nth-child(7) {
+      grid-column: 2 / span 2;
+    }
+    [data-bento] > div:nth-child(8) {
+      grid-column: 4 / span 2;
+    }
+
+    /* Proportional Responsive Card Image Containers */
+    [data-bento] > div > div:first-child {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      max-height: 320px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-divider);
+      background: var(--ink);
+    }
+    [data-bento] image-slot {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    @media (max-width: 1080px) {
+      [data-bento] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      [data-bento] > div,
+      [data-bento] > div:nth-child(7),
+      [data-bento] > div:nth-child(8) {
+        grid-column: span 1 !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      [data-bento] {
+        grid-template-columns: 1fr !important;
+      }
+      [data-bento] > div,
+      [data-bento] > div:nth-child(7),
+      [data-bento] > div:nth-child(8) {
+        grid-column: span 1 !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      [data-stack] {
+        grid-template-columns: 1fr !important;
+      }
+      [data-stack] > div {
+        border-right: 0 !important;
+      }
+      #who {
+        grid-template-columns: 1fr !important;
+      }
+      #who > div:first-child {
+        position: relative !important;
+        top: 0 !important;
+      }
+      [data-numbers] {
+        grid-template-columns: 1fr !important;
+      }
+      [data-proof] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      [data-process] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+    @media (max-width: 600px) {
+      [data-process] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      [data-hero-stats] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        margin: 0 !important;
+      }
+      [data-hero-stats] > div {
+        border-right: 1px solid var(--color-divider) !important;
+        border-bottom: 1px solid var(--color-divider) !important;
+        padding: 16px 20px !important;
+      }
+    }
+    @media (max-width: 440px) {
+      [data-hero-stats] {
+        grid-template-columns: 1fr !important;
+      }
+      [data-hero-stats] > div {
+        border-right: 0 !important;
+      }
+    }
+  </style>
+  <script src="./image-slot.js"></script>
+  </helmet>
+
+<div style="position: relative; background: var(--ink); color: var(--white); font-family: var(--font-body); overflow-x: hidden">
+
+  <div style="position: fixed; inset: -120% -120%; z-index: 60; pointer-events: none; opacity: 0.5; mix-blend-mode: soft-light; animation: ccGrain 7s steps(4) infinite; background-image: url('data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22&gt;&lt;filter id=%22n%22&gt;&lt;feTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/&gt;&lt;/filter&gt;&lt;rect width=%22220%22 height=%22220%22 filter=%22url(%23n)%22 opacity=%220.42%22/&gt;&lt;/svg&gt;'); left: -627px; top: -1113px"></div>
+
+  <header style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); background: rgba(17, 17, 15, 0.78); border-bottom: 1px solid var(--color-divider)">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px clamp(20px, 4vw, 72px)">
+      <div style="display: flex; align-items: baseline; gap: 11px">
+        <span style="font-family: var(--font-heading); font-weight: 700; font-size: 19px">Chosen</span>
+        <span style="font-family: var(--font-heading); font-weight: 700; font-size: 10.5px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted)">Consultancy</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 26px">
+        <a href="https://calendly.com/contact-tharunkumaronline/30min" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; padding: 11px 26px; border-radius: 999px; background: var(--accent); color: var(--ink); font-size: 13px; font-weight: 700; text-decoration: none; transition: background 200ms ease" style-hover="background: #C7B396">BOOK YOUR FREE STRATEGY SESSION</a>
+      </div>
+    </div>
+  </header>
+
+  <section data-stack="1" style="position: relative; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); min-height: calc(100vh - 61px)">
+    <div data-hero-left="1" style="position: relative; display: flex; flex-direction: column; justify-content: center; padding: clamp(24px, 3vh, 56px) clamp(20px, 4vw, 72px) 0; border-right: 1px solid var(--color-divider); min-height: 0">
+      <div style="position: absolute; top: 6%; left: -16%; width: 560px; height: 560px; border-radius: 999px; background: radial-gradient(circle, rgba(176,152,120,0.17), transparent 68%); pointer-events: none"></div>
+      <div style="position: relative; max-width: 740px">
+        <div data-reveal="1" style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--color-divider); background: var(--accent-soft); font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(16px, 2.4vh, 30px)">
+          <span style="width: 5px; height: 5px; border-radius: 999px; background: var(--accent)"></span>
+          For real estate developers, brokerages and agencies
+        </div>
+        <h1 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(34px, min(4.4vw, 6.6vh), 68px); line-height: 1.03; margin: 0 0 clamp(16px, 2.4vh, 26px); text-wrap: pretty">
+          We put your listings in front of <span style="color: var(--accent)">a million people</span>.
+        </h1>
+        <p data-reveal="3" style="font-size: clamp(14.5px, min(1.1vw, 2vh), 17.5px); line-height: 1.62; max-width: 560px; color: var(--muted); margin: 0 0 clamp(18px, 3vh, 34px); text-wrap: pretty">We take over your marketing &amp; media team and build the system behind it — YouTube, Reels, performance marketing and the lead flow that follows.</p>
+        <div data-reveal="4" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-bottom: clamp(24px, 4vh, 56px)">
+          <a href="https://calendly.com/contact-tharunkumaronline/30min" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: clamp(14px, 2vh, 18px) clamp(28px, 3vw, 40px); border-radius: 999px; background: var(--accent); color: var(--ink); font-family: var(--font-heading); font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 200ms ease, transform 200ms ease" style-hover="background: #C7B396; transform: translateY(-2px)" style-active="background: #96805F">Book your free strategy session</a>
+          <span style="font-size: 13px; color: var(--muted); max-width: 340px; line-height: 1.5">30 minutes, free. You leave with the exact plan — whether or not you hire us.</span>
+        </div>
+      </div>
+      <div data-hero-stats="1" style="position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--color-divider); margin: 0 clamp(-20px, -4vw, -72px)">
+        <div style="border-right: 1px solid var(--color-divider); padding: clamp(16px, 2.4vh, 26px) clamp(20px, 4vw, 72px)">
+          <div data-count="1" data-to="1" data-suffix="M+" style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 32px); line-height: 1">1M+</div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: clamp(6px, 1.2vh, 11px)">Monthly reach</div>
+        </div>
+        <div style="border-right: 1px solid var(--color-divider); padding: clamp(16px, 2.4vh, 26px) 26px">
+          <div data-count="1" data-to="796" data-suffix="K" style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 32px); line-height: 1">796K</div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: clamp(6px, 1.2vh, 11px)">Subscribers</div>
+        </div>
+        <div style="border-right: 1px solid var(--color-divider); padding: clamp(16px, 2.4vh, 26px) 26px">
+          <div data-count="1" data-to="88.6" data-suffix="M" style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 32px); line-height: 1">88.6M</div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: clamp(6px, 1.2vh, 11px)">Lifetime views</div>
+        </div>
+        <div style="border-right: 1px solid var(--color-divider); padding: clamp(16px, 2.4vh, 26px) 26px">
+          <div data-count="1" data-to="1.2" data-suffix="M" style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 32px); line-height: 1">1.2M</div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: clamp(6px, 1.2vh, 11px)">Avg. Reel views</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; min-height: 62vh">
+      <image-slot id="hero-tower" src="assets/slots/hero-tower.webp" shape="rect" fit="cover" placeholder="Drop a Dubai skyline or listing photo" style="position: absolute; inset: 0; display: block; width: 100%; height: 100%"></image-slot>
+      <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(17,17,15,0.88), rgba(17,17,15,0.04) 46%, rgba(17,17,15,0.4)); pointer-events: none"></div>
+      <div style="position: absolute; left: 30px; bottom: 30px; display: flex; align-items: center; gap: 12px; padding: 10px 20px; border-radius: 999px; background: rgba(17,17,15,0.7); border: 1px solid var(--color-divider); font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); pointer-events: none">
+        <span style="width: 5px; height: 5px; border-radius: 999px; background: var(--accent)"></span>
+        Attention is the new location
+      </div>
+    </div>
+  </section>
+
+  <div style="border-block: 1px solid var(--color-divider); background: var(--panel); overflow: hidden; padding: 15px 0">
+    <div style="display: flex; width: max-content; animation: ccMarquee 42s linear infinite">
+      <div style="display: flex; gap: 42px; padding-right: 42px; font-family: var(--font-mono); font-weight: 700; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); white-space: nowrap">
+        <span>Viral concepts</span><span style="color: var(--accent)">·</span><span>Packaging</span><span style="color: var(--accent)">·</span><span>YouTube systems</span><span style="color: var(--accent)">·</span><span>Reels cadence</span><span style="color: var(--accent)">·</span><span>Editing standards</span><span style="color: var(--accent)">·</span><span>Performance marketing</span><span style="color: var(--accent)">·</span><span>Lead generation</span><span style="color: var(--accent)">·</span><span>Data backed</span><span style="color: var(--accent)">·</span>
+      </div>
+      <div style="display: flex; gap: 42px; padding-right: 42px; font-family: var(--font-mono); font-weight: 700; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); white-space: nowrap">
+        <span>Viral concepts</span><span style="color: var(--accent)">·</span><span>Packaging</span><span style="color: var(--accent)">·</span><span>YouTube systems</span><span style="color: var(--accent)">·</span><span>Reels cadence</span><span style="color: var(--accent)">·</span><span>Editing standards</span><span style="color: var(--accent)">·</span><span>Performance marketing</span><span style="color: var(--accent)">·</span><span>Lead generation</span><span style="color: var(--accent)">·</span><span>Data backed</span><span style="color: var(--accent)">·</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="who" data-screen-label="Who we are" style="display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 4vw, 72px); padding: clamp(48px, 6.5vh, 104px) clamp(20px, 4vw, 72px); align-items: start; border-bottom: 1px solid var(--color-divider)">
+    <div style="position: sticky; top: 96px">
+      <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(14px, 2.2vh, 22px)">01 — Who we are</div>
+      <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(26px, min(3vw, 4.6vh), 42px); line-height: 1.06; margin: 0 0 clamp(16px, 2.4vh, 24px); text-wrap: pretty">Consultants, not an agency retainer.</h2>
+      <div style="display: flex; flex-direction: column; gap: 11px; font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">
+        <div>Media systems</div>
+        <div>Performance</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px; font-size: clamp(15px, 1.05vw, 17.5px); line-height: 1.68; color: var(--cream); max-width: 780px">
+      <p data-reveal="1" style="margin: 0">We built and scaled our own media properties before we advised anyone else's. A YouTube channel from scratch to 796K subscribers and 88.6M views. ScreelX, a short-form studio. FITX120, an online fitness coaching business scaled on Meta ads.</p>
+      <p data-reveal="2" style="margin: 0; color: var(--muted)">That means we don't hand you a strategy deck and leave. We step inside your marketing team, set up the process for YouTube and Reels, and stay until it runs without us.</p>
+      <p data-reveal="3" style="margin: 0; color: var(--muted)">Dubai real estate is the most competitive attention market in the world right now. The brokerages winning it are the ones publishing like media companies. We make yours one.</p>
+    </div>
+  </section>
+
+  <section id="offer" data-screen-label="What we offer" style="padding: clamp(40px, 5vh, 84px) clamp(20px, 4vw, 72px); border-bottom: 1px solid var(--color-divider)">
+    <div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: clamp(22px, 3.2vh, 40px)">
+      <div>
+        <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(12px, 1.8vh, 18px)">02 — What we offer</div>
+        <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(25px, min(3vw, 4.4vh), 44px); line-height: 1.04; margin: 0; max-width: 840px; text-wrap: pretty">Everything the media engine needs, in one team.</h2>
+      </div>
+      <p data-reveal="3" style="font-size: 14px; line-height: 1.55; color: var(--muted); max-width: 560px; margin: 0">Attention, spend and closing owned together — so nothing gets lost between them.</p>
+    </div>
+
+    <div data-bento="1" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; align-items: stretch">
+      <div data-reveal="1" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-take-over" src="assets/slots/offer-take-over.webp" shape="rect" fit="cover" placeholder="Drop a shoot-day photo of the media team" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">01</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">We take over your media team</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">You keep the people. We own the standard, calendar and output.</p>
+        </div>
+      </div>
+      <div data-reveal="2" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-inhouse" src="assets/slots/offer-inhouse.webp" shape="rect" fit="cover" placeholder="Drop a photo of the in-house YT/Reels setup" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">02</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">In-house YouTube &amp; Reels setup</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Brief, shoot, edit, publish — the whole pipeline, in your office.</p>
+        </div>
+      </div>
+      <div data-reveal="3" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-concepts" src="assets/slots/offer-concepts.webp" shape="rect" fit="cover" placeholder="Drop a screenshot of the concept library" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">03</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Viral concepts on tap</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">A proven concept library, mapped onto your inventory.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-packaging" src="assets/slots/offer-packaging.webp" shape="rect" fit="cover" placeholder="Drop a thumbnail / packaging grid" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">04</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Packaging that earns the click</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Titles, thumbnails and intros written for you.</p>
+        </div>
+      </div>
+      <div data-reveal="2" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-frameworks" src="assets/slots/offer-frameworks.webp" shape="rect" fit="contain" placeholder="Drop a framework or SOP screenshot" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">05</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Frameworks &amp; written SOPs</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Everything documented, so your team keeps it when we leave.</p>
+        </div>
+      </div>
+      <div data-reveal="3" style="grid-column: span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-performance" src="assets/slots/offer-performance.webp" shape="rect" fit="contain" placeholder="Drop a performance dashboard screenshot" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">06</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Performance marketing</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Meta and Google spend managed to cost per qualified lead.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="grid-column: 2 / span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-leadgen" src="assets/slots/offer-leadgen.webp" shape="rect" fit="cover" placeholder="Drop a lead-gen pipeline screenshot" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">07</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Lead generation framework</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Where the enquiry lands, who calls it, how fast.</p>
+        </div>
+      </div>
+      <div data-reveal="3" style="grid-column: 4 / span 2; min-width: 0; display: flex; flex-direction: column; gap: 16px; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 1.8vw, 22px); overflow: hidden; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider); background: var(--ink)">
+          <image-slot id="offer-editing" src="assets/slots/offer-editing.webp" shape="rect" fit="cover" placeholder="Drop an editing-timeline screenshot" style="display: block; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding: 0">
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; color: var(--accent)">08</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.25vw, 21px); line-height: 1.18; margin: 0">Editing consultation</h3>
+          <p style="font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0">Your editor gets our pace, captions and sound standard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="numbers" data-screen-label="The numbers" style="padding: clamp(40px, 5vh, 84px) clamp(20px, 4vw, 72px); background: var(--panel); border-bottom: 1px solid var(--color-divider)">
+    <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(12px, 1.8vh, 18px)">03 — What we've built</div>
+    <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(25px, min(3vw, 4.4vh), 44px); line-height: 1.04; margin: 0 0 clamp(22px, 3.2vh, 40px); max-width: 860px; text-wrap: pretty">The system exists. It has already been run at scale.</h2>
+
+    <div data-numbers="1" style="display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr); gap: 16px; align-items: stretch">
+      <div data-reveal="1" style="min-width: 0; border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(16px, 2vh, 24px); background: var(--ink); display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px">
+          <h3 style="font-family: var(--font-heading); font-size: clamp(16px, 1.2vw, 20px); margin: 0">Straight from the dashboard</h3>
+          <span style="font-family: var(--font-mono); font-weight: 700; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">YouTube Studio</span>
+        </div>
+        <div style="flex: 1; min-height: clamp(220px, 34vh, 420px); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-divider)">
+          <img src="assets/yt-analytics.png" alt="YouTube Studio analytics showing lifetime views, watch hours and subscriber growth" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block">
+        </div>
+      </div>
+
+      <div data-reveal="2" style="min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--color-divider); border-radius: var(--radius-lg); background: var(--ink); overflow: hidden">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: clamp(14px, 2vh, 22px) clamp(16px, 1.8vw, 24px)">
+          <div style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 34px); line-height: 1"><span data-count="1" data-to="796" data-suffix="K">796K</span></div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Subscribers from zero</div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: clamp(14px, 2vh, 22px) clamp(16px, 1.8vw, 24px); border-top: 1px solid var(--color-divider)">
+          <div style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 34px); line-height: 1"><span data-count="1" data-to="88.6" data-suffix="M">88.6M</span></div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Views published</div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: clamp(14px, 2vh, 22px) clamp(16px, 1.8vw, 24px); border-top: 1px solid var(--color-divider)">
+          <div style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 34px); line-height: 1"><span data-count="1" data-to="1.2" data-suffix="M">1.2M</span></div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Average Reel views</div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: clamp(14px, 2vh, 22px) clamp(16px, 1.8vw, 24px); border-top: 1px solid var(--color-divider)">
+          <div style="font-family: var(--font-heading); font-size: clamp(22px, min(2.2vw, 3.4vh), 34px); line-height: 1"><span data-count="1" data-to="1" data-suffix="M+">1M+</span></div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Reached monthly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="How it runs" style="padding: clamp(36px, 4.5vh, 76px) clamp(20px, 4vw, 72px); border-bottom: 1px solid var(--color-divider)">
+    <div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: clamp(20px, 3vh, 36px)">
+      <div>
+        <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(10px, 1.6vh, 16px)">04 — How it runs</div>
+        <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(21px, min(2.4vw, 3.6vh), 36px); line-height: 1.05; margin: 0; max-width: 760px; text-wrap: pretty">Sixteen weeks to a machine that publishes without you.</h2>
+      </div>
+      <p data-reveal="3" style="font-size: 13.5px; line-height: 1.55; color: var(--muted); max-width: 560px; margin: 0">We work inside your team, on your accounts, with your agents on camera.</p>
+    </div>
+
+    <div data-process="1" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 2.2vw, 32px)">
+      <div data-reveal="1" style="min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 2px solid var(--accent)">
+        <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; color: var(--accent)">WEEK 01</div>
+        <h4 style="font-family: var(--font-heading); font-size: clamp(15px, 1.15vw, 18px); margin: 0; line-height: 1.2">Audit and access</h4>
+        <p style="font-size: 13px; line-height: 1.55; color: var(--muted); margin: 0">We read your data first: past content, ad accounts, lead flow, close rates.</p>
+      </div>
+      <div data-reveal="2" style="min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 2px solid rgba(176,152,120,0.52)">
+        <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; color: var(--accent)">WEEK 02</div>
+        <h4 style="font-family: var(--font-heading); font-size: clamp(15px, 1.15vw, 18px); margin: 0; line-height: 1.2">Concepts and packaging</h4>
+        <p style="font-size: 13px; line-height: 1.55; color: var(--muted); margin: 0">Proven concepts mapped to your inventory, with titles, hooks and thumbnails.</p>
+      </div>
+      <div data-reveal="3" style="min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 2px solid rgba(176,152,120,0.34)">
+        <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; color: var(--accent)">WEEK 03</div>
+        <h4 style="font-family: var(--font-heading); font-size: clamp(15px, 1.15vw, 18px); margin: 0; line-height: 1.2">Production cadence</h4>
+        <p style="font-size: 13px; line-height: 1.55; color: var(--muted); margin: 0">Shoot days, edit standards and a calendar your team can hold on its own.</p>
+      </div>
+      <div data-reveal="4" style="min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 2px solid rgba(176,152,120,0.18)">
+        <div style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; color: var(--accent)">WEEK 04</div>
+        <h4 style="font-family: var(--font-heading); font-size: clamp(15px, 1.15vw, 18px); margin: 0; line-height: 1.2">Leads to closings</h4>
+        <p style="font-size: 13px; line-height: 1.55; color: var(--muted); margin: 0">Paid campaigns behind the organic, a lead framework, and sales training.</p>
+      </div>
+    </div>
+
+    <div data-reveal="4" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; margin-top: clamp(20px, 3vh, 36px); padding-top: clamp(14px, 2vh, 22px); border-top: 1px solid var(--color-divider)">
+      <span style="font-family: var(--font-mono); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent)">What we need from you</span>
+      <span style="font-size: 13.5px; color: var(--cream)">IG + YouTube access + Your marketing team + One editor + Agents on camera + Two sessions with your sales team</span>
+    </div>
+  </section>
+
+  <section id="proof" data-screen-label="Why we fit" style="padding: clamp(40px, 5vh, 84px) clamp(20px, 4vw, 72px); border-bottom: 1px solid var(--color-divider)">
+    <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: clamp(12px, 1.8vh, 18px)">05 — Why we fit</div>
+    <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(21px, min(2.5vw, 3.8vh), 40px); line-height: 1.04; margin: 0 0 clamp(22px, 3.2vh, 40px); max-width: 780px; text-wrap: pretty">We have done it with our own money and our own accounts.</h2>
+
+    <div data-proof="1" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch">
+      <a data-reveal="1" href="https://www.youtube.com/@tharunkumar2.0" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(20px, 2vw, 28px); display: flex; flex-direction: column; gap: 14px; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <img src="assets/yt-channel.jpg" alt="YouTube from scratch" style="width: 54px; height: 54px; border-radius: 999px; object-fit: cover; ">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; line-height: 1.16; margin: 0">YouTube from scratch</h3>
+        <p style="font-size: 13.5px; line-height: 1.6; color: var(--muted); margin: 0">Zero to 796K subscribers with no starting audience and no paid push — built on the packaging system we install in your team.</p>
+        <span style="margin-top: auto; font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Visit the channel →</span>
+      </a>
+      <div data-reveal="2" style="background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(20px, 2vw, 28px); display: flex; flex-direction: column; gap: 14px; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <img src="assets/screelx.jpg" alt="ScreelX" style="width: 54px; height: 54px; border-radius: var(--radius-md); object-fit: cover; ">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; line-height: 1.16; margin: 0">Screelx</h3>
+        <p style="font-size: 13.5px; line-height: 1.6; color: var(--muted); margin: 0">Our short-form studio. Reels averaging 1.2M views — the concept library and edit standards your team inherits.</p>
+      </div>
+      <div data-reveal="3" style="background: var(--panel); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(20px, 2vw, 28px); display: flex; flex-direction: column; gap: 14px; transition: border-color 260ms ease, transform 260ms ease" style-hover="border-color: rgba(176,152,120,0.4); transform: translateY(-3px)">
+        <img src="assets/fx120.png" alt="FITX120" style="width: 54px; height: 54px; border-radius: var(--radius-md); object-fit: cover; background: var(--white); ">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; line-height: 1.16; margin: 0">FITX120</h3>
+        <p style="font-size: 13.5px; line-height: 1.6; color: var(--muted); margin: 0">An online fitness coaching business scaled on Meta ads. Where our performance marketing and lead generation framework was proven.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="call" data-screen-label="Claim your session" style="position: relative; padding: clamp(48px, 7vh, 110px) clamp(20px, 4vw, 72px); border-bottom: 1px solid var(--color-divider); overflow: hidden">
+    <div style="position: absolute; bottom: -30%; left: 50%; width: 720px; height: 720px; transform: translateX(-50%); border-radius: 999px; background: radial-gradient(circle, rgba(176,152,120,0.2), transparent 68%); pointer-events: none"></div>
+    <div style="position: relative; max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(16px, 2.4vh, 26px)">
+      <div data-reveal="1" style="font-family: var(--font-mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent)">06 — Next step</div>
+      <h2 data-reveal="2" style="font-family: var(--font-heading); font-size: clamp(28px, min(3.8vw, 5.6vh), 56px); line-height: 1.02; margin: 0; text-wrap: pretty">Claim your free strategy session.</h2>
+      <p data-reveal="3" style="font-size: clamp(15px, 1.15vw, 18px); line-height: 1.62; color: var(--muted); margin: 0; max-width: 560px">Thirty minutes. We look at your accounts and your lead flow, and tell you exactly what we would change first.</p>
+      <a data-reveal="4" href="https://calendly.com/contact-tharunkumaronline/30min" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: clamp(15px, 2.2vh, 19px) clamp(30px, 3.2vw, 44px); border-radius: 999px; background: var(--accent); color: var(--ink); font-family: var(--font-heading); font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 200ms ease, transform 200ms ease" style-hover="background: #C7B396; transform: translateY(-2px)" style-active="background: #96805F">Book your free strategy session</a>
+      <div data-reveal="5" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin-top: clamp(6px, 1.4vh, 14px); font-size: 13.5px; color: var(--cream)">
+        <span style="display: flex; gap: 10px"><span style="font-family: var(--font-mono); font-weight: 700; color: var(--accent)">01</span>No retainer discussed on the first call.</span>
+        <span style="display: flex; gap: 10px"><span style="font-family: var(--font-mono); font-weight: 700; color: var(--accent)">02</span>We take a limited number of clients at a time.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; padding: 30px clamp(20px, 4vw, 72px); font-size: 13px; color: var(--muted)">
+      <span>Chosen Consultancy — Media and Marketing For Dubai Real Estate</span>
+      <a href="https://calendly.com/contact-tharunkumaronline/30min" target="_blank" rel="noopener" style="text-decoration: none; font-weight: 700; color: var(--accent)">Book your free strategy session</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.setupReveal();
+    this.setupCounters();
+  }
+
+  componentWillUnmount() {
+    (this.observers || []).forEach(o => o.disconnect());
+  }
+
+  track(o) { (this.observers = this.observers || []).push(o); }
+
+  setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 760ms cubic-bezier(.2,.7,.25,1), transform 760ms cubic-bezier(.2,.7,.25,1)';
+      el.style.transitionDelay = ((parseInt(el.getAttribute('data-reveal'), 10) || 1) - 1) * 90 + 'ms';
+    });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'none';
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+    this.track(io);
+  }
+
+  setupCounters() {
+    const fmt = (v, decimals) => decimals ? v.toFixed(decimals) : Math.round(v).toLocaleString('en-US');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        io.unobserve(el);
+        const to = parseFloat(el.getAttribute('data-to'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const decimals = (el.getAttribute('data-to').split('.')[1] || '').length;
+        const start = performance.now();
+        const dur = 1500;
+        const tick = now => {
+          const t = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = fmt(to * eased, decimals) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(el => io.observe(el));
+    this.track(io);
+  }
+
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
