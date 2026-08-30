@@ -117,7 +117,7 @@ Three pieces of JavaScript, all in one class in the page:
 3. **Film grain** — an SVG turbulence overlay at `mix-blend-mode: soft-light`, stepped on a 7s loop.
 
 No forms, no state, no API calls. All 4 booking links point at
-`https://calendly.com/contact-tharunkumaronline/30min` and open in a new tab.
+`https://calendly.com/contact-chosenconsultancy/30min` and open in a new tab.
 
 ## Deploying
 

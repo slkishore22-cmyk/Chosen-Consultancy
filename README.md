@@ -27,5 +27,5 @@ Then open http://localhost:8000
 
 ## Notes
 
-- The booking button links to https://calendly.com/contact-tharunkumaronline/30min
+- The booking button links to https://calendly.com/contact-chosenconsultancy/30min
 - TT Interphases Pro is a trial licence. Buy a web licence before this goes to a production domain.
